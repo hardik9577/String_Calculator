@@ -89,6 +89,15 @@ public class CalculatorTest {
 	    public void test9() {
 	        assertEquals(calculator.add("2,1001"), 2);
 	    }
+	    
+	    //. Allow multiple delimiters like this: 
+	    //“//[delim1][delim2]\n” 
+	   // for example 
+	   // “//[*][%]\n1*2%3” == 6
+	    @Test
+	    public void test11() {
+	        assertEquals(calculator.add("1;2\n3*4%5"), 15);
+	    }
 	}
 
 

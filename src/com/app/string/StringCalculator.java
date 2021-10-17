@@ -3,7 +3,7 @@ package com.app.string;
 public class StringCalculator {
 	
     public int add(String input) {
-        String[] numbersArr = input.split(",|\n|;");
+        String[] numbersArr = input.split(",|\n|;|[*]|[%]");
 
         if (input.isEmpty()) {
             return 0;
