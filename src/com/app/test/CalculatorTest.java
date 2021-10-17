@@ -75,6 +75,14 @@ public class CalculatorTest {
 	        thrown.expectMessage("Negative Not Allowed!");
 	        calculator.add("-1");
 	    }
+	    
+	    //If there are multiple negatives, show all of them in the exception message
+	    @Test
+	    public void test6() {
+	        thrown.expect(IllegalArgumentException.class);
+	        thrown.expectMessage("Negative Not Allowed!");
+	        calculator.add("1\n-2,-3");
+	    }
 	}
 
 
