@@ -66,6 +66,15 @@ public class CalculatorTest {
 	        assertEquals(calculator.add("1\n2\n3\n4"), 10);
 	        assertEquals(calculator.add("1;2;3;4"), 10);
 	    }
+	    
+	    //Add with a negative number will throw an exception “negatives not allowed” -
+	    //and the negative that was passed. 
+	    @Test
+	    public void test5() {
+	        thrown.expect(IllegalArgumentException.class);
+	        thrown.expectMessage("Negative Not Allowed!");
+	        calculator.add("-1");
+	    }
 	}
 
 
