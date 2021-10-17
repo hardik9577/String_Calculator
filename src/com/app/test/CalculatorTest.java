@@ -44,6 +44,13 @@ public class CalculatorTest {
 	        assertEquals(calculator.add("1,2"), 3);
 	    }
 	    
+	    // Add method to handle an unknown amount of numbers
+	    @Test
+	    public void test2() {
+	        assertEquals(calculator.add("1,2"), 3);
+	        assertEquals(calculator.add("1,2,3"), 6);
+	        assertEquals(calculator.add("1,2,3,4"), 10);
+	    }
 	}
 
 
