@@ -83,6 +83,12 @@ public class CalculatorTest {
 	        thrown.expectMessage("Negative Not Allowed!");
 	        calculator.add("1\n-2,-3");
 	    }
+	    
+	    //Numbers bigger than 1000 should be ignored
+	    @Test
+	    public void test9() {
+	        assertEquals(calculator.add("2,1001"), 2);
+	    }
 	}
 
 
