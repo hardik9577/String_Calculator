@@ -38,6 +38,12 @@ public class CalculatorTest {
 	        assertEquals(calculator.add("2"), 2);
 	    }
 	    
+	    // , Delimited Should Be Added and 
+	    @Test
+	    public void test1_3() {
+	        assertEquals(calculator.add("1,2"), 3);
+	    }
+	    
 	}
 
 
