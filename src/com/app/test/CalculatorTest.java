@@ -31,6 +31,13 @@ public class CalculatorTest {
 	        assertEquals(calculator.add(""), 0);
 	    }
 	    
+	    //String Should Return Same Number
+	    @Test
+	    public void test1_2() {
+	        assertEquals(calculator.add("1"), 1);
+	        assertEquals(calculator.add("2"), 2);
+	    }
+	    
 	}
 
 
