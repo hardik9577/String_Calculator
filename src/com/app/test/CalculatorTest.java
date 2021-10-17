@@ -51,6 +51,13 @@ public class CalculatorTest {
 	        assertEquals(calculator.add("1,2,3"), 6);
 	        assertEquals(calculator.add("1,2,3,4"), 10);
 	    }
+	    
+	    //Add method to handle new lines between numbers (instead of commas)
+	    @Test
+	    public void test3() {
+	        assertEquals(calculator.add("1\n2"), 3);
+	        assertEquals(calculator.add("1\n2\n3"), 6);
+	    }
 	}
 
 
