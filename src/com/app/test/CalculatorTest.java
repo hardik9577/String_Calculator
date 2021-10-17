@@ -58,6 +58,14 @@ public class CalculatorTest {
 	        assertEquals(calculator.add("1\n2"), 3);
 	        assertEquals(calculator.add("1\n2\n3"), 6);
 	    }
+	    
+	    //Support different delimiters
+	    @Test
+	    public void test4() {
+	        assertEquals(calculator.add("1,2,3"), 6);
+	        assertEquals(calculator.add("1\n2\n3\n4"), 10);
+	        assertEquals(calculator.add("1;2;3;4"), 10);
+	    }
 	}
 
 
